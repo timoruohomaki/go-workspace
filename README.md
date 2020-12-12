@@ -1,1 +1,1 @@
-# go-workspace
+workspace for experiments on Go
