@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF8">
-    <title>Excercise 005</title>
+    <title>Excercise 006</title>
 </head>
 <body>
     {{$wisdom := .}}

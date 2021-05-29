@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF8">
+    <title>Excercise 007</title>
+</head>
+<body>
+    <ul>
+
+        <li>{{.Name}} - {{.Contact}}</li>
+
+    </ul>
+</body>
+</html>
