@@ -6,22 +6,16 @@ import (
 	"text/template"
 )
 
-// PARSE TEMPLATE AND CREATE FILE
+// PARSE ALL TEMPLATES AND CREATE OUTPUT FILE
+
+var tpl *template.Template
+
+func init() {
+	tpl = template.Must(template.ParseGlob("*"))
+}
 
 func main() {
-	tpl, err := template.ParseFiles("004.thtml")
-	if err != nil {
-		log.Fatalln(err)
-	}
-
-	nf, err := os.Create("004-out.html")
-	if err != nil {
-		log.Println("Error creating file", err)
-	}
-
-	defer nf.Close()
-
-	err = tpl.Execute(nf, nil)
+	err := tpl.ExecuteTemplate(os.Stdout, "004.thtml", nil)
 	if err != nil {
 		log.Fatalln(err)
 	}
